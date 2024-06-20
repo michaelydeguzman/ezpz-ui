@@ -18,7 +18,7 @@ export const NavButton: React.FC<NavButtonProps> = ({ text, route }) => {
       onHoverStart={() => setHovered(true)}
       onHoverEnd={() => setHovered(false)}
     >
-      <div className="cursor-pointer uppercase" onClick={onClickNavButton}>
+      <div className="cursor-pointer" onClick={onClickNavButton}>
         {text}
       </div>
       <div

@@ -40,7 +40,7 @@ export const Logo: React.FC<MainHeaderProps> = (
         className={`${caveat.className} flex cursor-pointer space-x-1 text-2xl transition-all duration-300 ease-in-out hover:scale-105`}
         onClick={onLogoClick}
       >
-        <div className="rounded-xl border-2 border-white p-2 transition-all duration-300 ease-in-out hover:border-orange-400 hover:text-orange-400">
+        <div className="rounded-xl border-2 border-white p-2 transition-all duration-300 ease-in-out hover:border-blue-500 hover:text-blue-500">
           {SITE_TEXT.TITLE}
         </div>
         <div className="text-xs">TM</div>

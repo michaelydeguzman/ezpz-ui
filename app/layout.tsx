@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${poppins.className}`}>
         <ReduxProvider>
-          <div className="h-screen w-screen">
+          <div className="h-screen w-screen bg-gradient-to-br from-zinc-900 to-black">
             <div>
               <NavBar />
             </div>

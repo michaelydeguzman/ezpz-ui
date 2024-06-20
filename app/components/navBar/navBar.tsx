@@ -8,9 +8,9 @@ export const NavBar: FC<NavBarProps> = () => {
   return (
     <div className="flex h-full w-full items-center justify-between px-20 py-10">
       <Logo />
-      <div className="flex space-x-10 text-lg">
-        <NavButton text="About" route="/about" />
+      <div className="flex space-x-24 text-xl">
         <NavButton text="Work" route="/work" />
+        <NavButton text="About" route="/about" />
         <NavButton text="Socials" route="/socials" />
         <NavButton text="Contact" route="/contact" />
       </div>

@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 type InitialState = {
-  value: AppState;
+  values: AppState;
 };
 
 type AppState = {
@@ -9,7 +9,7 @@ type AppState = {
 };
 
 const initialState = {
-  value: {
+  values: {
     isNavBarOnTop: false,
   } as AppState,
 } as InitialState;
@@ -20,7 +20,7 @@ export const app = createSlice({
   reducers: {
     updateNavBarOnTop: (_, action: PayloadAction<boolean>) => {
       return {
-        value: {
+        values: {
           isNavBarOnTop: action.payload,
         },
       };

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
+import { NavBar } from "./components/navBar/navBar";
 import "./globals.css";
 import { ReduxProvider } from "./redux/provider";
 
@@ -17,7 +18,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${poppins.className}`}>
-        <ReduxProvider>{children}</ReduxProvider>
+        <ReduxProvider>
+          <div className="h-screen w-screen">
+            <div>
+              <NavBar />
+            </div>
+            <div className="h-[calc(100vh - 6rem)]">{children}</div>
+          </div>
+        </ReduxProvider>
       </body>
     </html>
   );

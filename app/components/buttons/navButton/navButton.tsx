@@ -22,7 +22,7 @@ export const NavButton: React.FC<NavButtonProps> = ({ text, route }) => {
         {text}
       </div>
       <div
-        className={`rounded-lg border-t-2 border-white transition-all duration-300 ease-in-out ${hovered ? "w-full" : "w-0"}`}
+        className={`rounded-lg border-t border-white transition-all duration-300 ease-in-out ${hovered ? "w-full" : "w-0"}`}
       ></div>
     </motion.div>
   );

@@ -19,7 +19,7 @@ const StarryBackground: React.FC = () => {
       vy: number;
     }[] = [];
     const FPS = 60;
-    const x = 40;
+    const x = 100;
     const mouse = { x: 0, y: 0 };
 
     for (let i = 0; i < x; i++) {

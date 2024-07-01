@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Poppins } from "next/font/google";
+import { Inter } from "next/font/google";
 import { motion } from "framer-motion";
 import { SITE_TEXT } from "@/app/lib/constants";
 
@@ -10,7 +10,7 @@ interface MainHeaderProps {
   // isOnTop: boolean | undefined;
   // onClick: () => void;
 }
-const caveat = Poppins({ subsets: ["latin"], weight: ["400", "700"] });
+const inter = Inter({ subsets: ["latin"], weight: ["400", "700"] });
 
 export const Logo: React.FC<MainHeaderProps> = (
   {
@@ -37,7 +37,7 @@ export const Logo: React.FC<MainHeaderProps> = (
         }}
       > */}
       <div
-        className={`${caveat.className} flex cursor-pointer space-x-1 text-sm transition-all duration-300 ease-in-out hover:scale-105`}
+        className={`${inter.className} flex cursor-pointer space-x-1 text-sm transition-all duration-300 ease-in-out hover:scale-105`}
         onClick={onLogoClick}
       >
         <div className="rounded-xl border-2 border-white px-2 transition-all duration-300 ease-in-out hover:border-blue-500 hover:text-blue-500">

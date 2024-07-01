@@ -1,4 +1,5 @@
-import { FC } from "react";
+"use client";
+import { FC, useEffect, useState } from "react";
 import { Logo } from "../logo/logo";
 import { NavButtonGroup } from "./navButtonGroup/navButtonGroup";
 import { FaGithub, FaInstagram } from "react-icons/fa";
@@ -7,7 +8,7 @@ interface NavBarProps {}
 
 export const NavBar: FC<NavBarProps> = () => {
   return (
-    <div className="grid h-full w-full grid-cols-3 items-center p-10">
+    <div className={`grid h-full w-full grid-cols-3 items-center px-20`}>
       <div className="col-span-1 flex items-center justify-start">
         <Logo />
       </div>

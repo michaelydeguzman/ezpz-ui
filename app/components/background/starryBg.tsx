@@ -19,7 +19,7 @@ const StarryBackground: React.FC = () => {
       vy: number;
     }[] = [];
     const FPS = 60;
-    const x = 100;
+    const x = 25;
     const mouse = { x: 0, y: 0 };
 
     for (let i = 0; i < x; i++) {
@@ -101,7 +101,15 @@ const StarryBackground: React.FC = () => {
     };
   }, []);
 
-  return <canvas id="canvas" ref={canvasRef} style={{ background: "black" }} />;
+  return (
+    <canvas
+      id="canvas"
+      ref={canvasRef}
+      style={{
+        background: "none !important",
+      }}
+    />
+  );
 };
 
 export default StarryBackground;

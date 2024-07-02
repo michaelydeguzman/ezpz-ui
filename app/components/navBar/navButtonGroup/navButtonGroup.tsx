@@ -26,8 +26,8 @@ export const NavButtonGroup: FC<NavButtonGroupProps> = () => {
       } transition-all duration-300 ease-in-out`}
     >
       <NavButton text="About" route="/about" />
-      <NavButton text="Experience" route="/experience"></NavButton>
-      <NavButton text="Projects" route="/contact" />
+      <NavButton text="Experience" route="/experience" />
+      {/* <NavButton text="Projects" route="/contact" /> */}
     </div>
   );
 };

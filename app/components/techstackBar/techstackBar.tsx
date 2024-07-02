@@ -1,11 +1,10 @@
 "use client";
 import React from "react";
 import { FaCss3Alt, FaHtml5, FaReact } from "react-icons/fa";
-import { SiJavascript, SiCsharp } from "react-icons/si";
+import { SiJavascript, SiCsharp, SiTypescript } from "react-icons/si";
 import { RiNextjsFill } from "react-icons/ri";
-import { motion } from "framer-motion";
+
 import styles from "./styles.module.scss";
-import cn from "classnames";
 
 interface TechStackBarProps {
   // title: string | React.ReactNode;
@@ -22,10 +21,15 @@ export const TechStackBar: React.FC<TechStackBarProps> = () => {
       icon: <SiJavascript className="text-6xl text-yellow-400" />,
       label: "JavaScript",
     },
+    {
+      icon: <SiTypescript className="text-6xl text-blue-300" />,
+      label: "TypeScript",
+    },
     { icon: <FaReact className="text-6xl text-blue-400" />, label: "React" },
+
     {
       icon: <RiNextjsFill className="text-6xl text-blue-950" />,
-      label: "Next.JS",
+      label: "Next.js",
     },
     { icon: <SiCsharp className="text-6xl text-purple-800" />, label: "C#" },
   ];

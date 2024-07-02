@@ -8,13 +8,13 @@ interface NavBarProps {}
 
 export const NavBar: FC<NavBarProps> = () => {
   return (
-    <div className={`grid h-full w-full grid-cols-3 items-center px-20`}>
-      <div className="col-span-1 flex items-center justify-start">
+    <div className={`grid h-full w-full grid-cols-1 items-center px-20`}>
+      {/* <div className="col-span-1 flex items-center justify-start">
         <Logo />
-      </div>
-      <div className="col-span-1 flex items-center justify-center">
+      </div> */}
+      {/* <div className="col-span-1 flex items-center justify-center">
         <NavButtonGroup />
-      </div>
+      </div> */}
       <div className="col-span-1 flex items-center justify-end space-x-8">
         <FaGithub className="cursor-pointer text-2xl transition-all duration-300 ease-in-out hover:scale-110" />
         <FaInstagram className="cursor-pointer text-2xl transition-all duration-300 ease-in-out hover:scale-110" />

@@ -1,6 +1,7 @@
 import { WORK_EXP } from "@/app/lib/constants";
 import { MouseScrollButton } from "../buttons/mouseScrollButton/mouseScrollButton";
 import { TechStackBar } from "../techstackBar/techstackBar";
+import styles from "./index.module.scss";
 
 const Landing = () => {
   return (
@@ -33,7 +34,7 @@ const Experience = () => {
         <div className="sticky top-0 flex h-full max-w-[35rem] flex-col items-start justify-center">
           <span className="text-left text-4xl">Nice to meet you.</span>
           <p className="mt-10 rounded-lg text-left leading-normal text-slate-400">
-            I'm a Microsoft Certified Software Developer with 11+ years of
+            I am a Microsoft Certified Software Developer with 11+ years of
             experience in website, desktop application, solution integration &
             API development. I started initially as a back-end developer in 2013
             for tech companies in the Philippines. Around 2017, I developed a
@@ -44,19 +45,23 @@ const Experience = () => {
             <TechStackBar />
           </div>
 
-          <button className="mt-40 flex-grow-0 rounded bg-blue-500 px-3 py-2 text-white">
-            View Full Resume
-          </button>
+          <a href="/files/Michael Enry De Guzman_Resume.pdf" download>
+            <button className="mt-20 flex-grow-0 rounded-full border px-4 py-2 text-white hover:bg-slate-400 hover:text-black">
+              Download Full Resume
+            </button>
+          </a>
         </div>
       </div>
-      <div className="flex h-[600px] w-1/2 justify-start overflow-auto">
+      <div
+        className={`flex h-[600px] w-1/2 justify-start overflow-auto ${styles.maskedBottom} pb-10`}
+      >
         <div className="flex h-full w-[35rem] flex-col items-start">
           {WORK_EXP.map((exp, i) => {
             const { timeline, positions, company, techstack } = exp;
 
             return (
               <div
-                id={`exp_${i}`}
+                key={`exp_${i}`}
                 className="grid w-full cursor-pointer grid-cols-3 rounded-lg p-4 hover:bg-slate-800 hover:bg-opacity-40"
               >
                 <div className="col-span-1 w-full text-xs uppercase text-slate-400">
@@ -64,15 +69,18 @@ const Experience = () => {
                 </div>
                 <div className="col-span-2 flex flex-col">
                   {positions.map((position, ii) => (
-                    <span id={`pos_${ii}`} className="text-left text-sm">
+                    <span key={`pos_${ii}`} className="text-left text-sm">
                       {position}
                     </span>
                   ))}
                   <span className="mt-1 text-xs text-slate-400">{company}</span>
                   {techstack && (
                     <ul className="mt-4 flex w-full flex-wrap">
-                      {techstack.map((ts) => (
-                        <li className="mr-1.5 mt-2 rounded-full bg-blue-400 bg-opacity-20 px-3 py-1 text-xs text-blue-500">
+                      {techstack.map((ts, iii) => (
+                        <li
+                          key={`ts_${iii}`}
+                          className="mr-1.5 mt-2 rounded-full bg-blue-400 bg-opacity-20 px-3 py-1 text-xs text-blue-500"
+                        >
                           {ts}
                         </li>
                       ))}

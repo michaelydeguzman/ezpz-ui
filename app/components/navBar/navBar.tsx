@@ -1,7 +1,5 @@
 "use client";
-import { FC, useEffect, useState } from "react";
-import { Logo } from "../logo/logo";
-import { NavButtonGroup } from "./navButtonGroup/navButtonGroup";
+import { FC } from "react";
 import { FaGithub, FaInstagram } from "react-icons/fa";
 
 interface NavBarProps {}
@@ -16,8 +14,14 @@ export const NavBar: FC<NavBarProps> = () => {
         <NavButtonGroup />
       </div> */}
       <div className="col-span-1 flex items-center justify-end space-x-8">
-        <FaGithub className="cursor-pointer text-2xl transition-all duration-300 ease-in-out hover:scale-110" />
-        <FaInstagram className="cursor-pointer text-2xl transition-all duration-300 ease-in-out hover:scale-110" />
+        <a
+          href="https://github.com/michaelydeguzman"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaGithub className="cursor-pointer text-2xl transition-all duration-300 ease-in-out hover:scale-110" />
+        </a>
+        {/* <FaInstagram className="cursor-pointer text-2xl transition-all duration-300 ease-in-out hover:scale-110" /> */}
       </div>
     </div>
   );

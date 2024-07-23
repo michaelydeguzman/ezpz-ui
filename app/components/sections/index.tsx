@@ -1,4 +1,4 @@
-import { WORK_EXP } from "@/app/lib/constants";
+import { SITE_TEXT, WORK_EXP } from "@/app/lib/constants";
 import { MouseScrollButton } from "../buttons/mouseScrollButton/mouseScrollButton";
 import { TechStackBar } from "../techstackBar/techstackBar";
 import styles from "./index.module.scss";
@@ -21,25 +21,14 @@ const Landing = () => {
   );
 };
 
-// const About = () => {
-//   return (
-
-//   );
-// };
-
 const Experience = () => {
   return (
     <div className="flex h-full w-full items-center space-x-20">
       <div className="sticky top-0 flex h-full w-1/2 justify-end">
         <div className="sticky top-0 flex h-full max-w-[35rem] flex-col items-start justify-center">
-          <span className="text-left text-4xl">Nice to meet you.</span>
+          <span className="text-left text-4xl">{SITE_TEXT.GREETING}</span>
           <p className="mt-10 rounded-lg text-left leading-normal text-slate-400">
-            I am a Microsoft Certified Software Developer with 11+ years of
-            experience in website, desktop application, solution integration &
-            API development. I started initially as a back-end developer in 2013
-            for tech companies in the Philippines. Around 2017, I developed a
-            passion for learning creative UI/UX design & writing clean,
-            responsive & scalable front-end code.
+            {SITE_TEXT.SUMMARY}
           </p>
           <div className="mt-10">
             <TechStackBar />
@@ -99,6 +88,5 @@ const Experience = () => {
 // Sections object to organize components
 export const Sections = {
   Landing,
-  // About,
   Experience,
 };

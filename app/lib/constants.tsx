@@ -1,13 +1,14 @@
 export const SITE_TEXT = {
   TITLE: "Michael DG",
   SUBTITLE: "Full-stack Software Developer",
-  ABOUT:
-    "Microsoft Certified Software Developer with 11+ years of experience in Application, Website, API development with extensive experience on multiple tech stacks. Precision, quality, efficiency & creativity are the pillars I stand by as a developer to leverage my skills & industry knowledge to address business needs and overcome challenges to drive business growth.",
+  GREETING: "Nice to meet you.",
+  SUMMARY:
+    "I am a Microsoft Certified Software Developer with 11+ years of experience in website, desktop application, solution integration & API development. I started initially as a back-end developer in 2013 for tech companies in the Philippines. Around 2017, I developed a passion for learning creative UI/UX design & writing clean, responsive & scalable front-end code.",
 };
 
 export const WORK_EXP = [
   {
-    count: 1,
+    id: 1,
     timeline: "2023 - Present",
     positions: ["Software Developer"],
     company: "Centra Windows",
@@ -22,28 +23,28 @@ export const WORK_EXP = [
     ],
   },
   {
-    count: 2,
+    id: 2,
     timeline: "2022 - 2023",
     positions: ["Senior Software Engineering Consultant"],
     company: "BCS Technology International, Ltd.",
     techstack: ["JavaScript", "TypeScript", "React", ".NET 6", "SQL Server"],
   },
   {
-    count: 3,
+    id: 3,
     timeline: "2020 - 2021",
     positions: ["Technical Lead Software Developer"],
     company: "LP IT Solutions, Inc.",
     techstack: ["React", ".NET Core 3.1", "SQL Server"],
   },
   {
-    count: 4,
+    id: 4,
     timeline: "2020 - 2021",
     positions: ["Technical Lead Software Developer"],
     company: "Pragmanila Solutions, Inc.",
     techstack: ["React", ".NET Core 3.1", "SQL Server"],
   },
   {
-    count: 5,
+    id: 5,
     timeline: "2017 - 2020",
     positions: [
       "Senior Technical Consultant",
@@ -53,7 +54,7 @@ export const WORK_EXP = [
     techstack: ["HTML & CSS", "KnockoutJS", ".NET 4.5 Framework", "SQL Server"],
   },
   {
-    count: 6,
+    id: 6,
     timeline: "2013 - 2017",
     positions: [
       "Senior Software Engineer",

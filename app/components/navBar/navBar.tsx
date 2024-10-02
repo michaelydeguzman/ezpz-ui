@@ -6,15 +6,15 @@ interface NavBarProps {}
 
 export const NavBar: FC<NavBarProps> = () => {
   return (
-    <div className="fixed top-4 z-20 h-[5rem] w-full">
-      <div className={`grid h-full w-full grid-cols-1 items-center px-20`}>
+    <div className="top-4 z-20 h-[5rem] w-full p-10">
+      <div className={`grid h-full w-full grid-cols-1 items-center`}>
         {/* <div className="col-span-1 flex items-center justify-start">
         <Logo />
       </div> */}
         {/* <div className="col-span-1 flex items-center justify-center">
         <NavButtonGroup />
       </div> */}
-        <div className="col-span-1 flex items-center justify-end space-x-8">
+        <div className="col-span-1 flex w-full items-center justify-end space-x-8">
           <a
             href="https://github.com/michaelydeguzman"
             target="_blank"

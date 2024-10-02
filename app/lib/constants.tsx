@@ -3,7 +3,7 @@ export const SITE_TEXT = {
   SUBTITLE: "Full-stack Software Developer",
   GREETING: "Nice to meet you.",
   SUMMARY:
-    "I am a Microsoft Certified Software Developer with 11+ years of experience in website, desktop application, solution integration & API development. I started as a back-end developer in 2013 working for Accenture. Around 2017, I developed a passion for learning creative UI/UX design & writing clean, responsive & scalable front-end code.",
+    "I am a Microsoft Certified Software Developer with 11+ years of experience in website, desktop application, solution integration & API development. I started  initially as a back-end developer in 2013. In 2017, I developed a passion for learning creative UI/UX design & writing clean, responsive & scalable front-end code and decided to take on the full stack experience.",
 };
 
 export const WORK_EXP = [

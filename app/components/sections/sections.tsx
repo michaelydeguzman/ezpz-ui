@@ -59,7 +59,7 @@ export const Sections: FC<SectionProps> = () => {
           </div>
         </div>
         <div
-          className={`flex h-[500px] w-full overflow-auto sm:w-full md:w-1/2 md:justify-start ${styles.maskedBottom} mt-10 pb-10 sm:mt-10`}
+          className={`flex h-screen w-full overflow-auto sm:w-full md:h-[500px] md:w-1/2 md:justify-start ${styles.maskedBottom} mt-10 pb-10 sm:mt-10`}
         >
           <div className="mt-10 flex h-full w-full flex-col items-start sm:mt-10 sm:w-full md:mt-0 md:w-[35rem]">
             {WORK_EXP.map((exp, i) => {

@@ -1,9 +1,11 @@
 "use client";
 
+import useIsMobile from "@/app/hooks/useIsMobile";
 import { useEffect, useRef } from "react";
 
 const StarryBackground: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     const canvas = canvasRef.current!;
@@ -99,13 +101,10 @@ const StarryBackground: React.FC = () => {
     return () => {
       canvas.removeEventListener("mousemove", () => {});
     };
-  }, []);
+  }, [isMobile]);
 
   return (
-    <div
-      id="background"
-      className="absolute left-0 top-0 z-0 h-screen w-screen"
-    >
+    <div id="background" className="absolute left-0 top-0 z-0">
       <canvas
         id="canvas"
         ref={canvasRef}

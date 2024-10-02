@@ -41,7 +41,7 @@ export const TechStackBar: React.FC<TechStackBarProps> = () => {
 
   return (
     <>
-      {/* {isMobile ? (
+      {isMobile ? (
         <div className="mt-10 grid grid-cols-4 gap-8">
           {iconList.map((item, index) => (
             <div
@@ -57,22 +57,22 @@ export const TechStackBar: React.FC<TechStackBarProps> = () => {
             </div>
           ))}
         </div>
-      ) : ( */}
-      <div className={`${styles.scroller} mt-10 w-full`}>
-        {iconList.map((item, index) => (
-          <div
-            key={index}
-            className={styles.item}
-            style={{
-              animationDelay: `calc(${30}s / ${totalItems} * (${totalItems} - ${index}) * -1)`,
-            }}
-          >
-            {item.icon}
-            <span>{item.label}</span>
-          </div>
-        ))}
-      </div>
-      {/* )} */}
+      ) : (
+        <div className={`${styles.scroller} mt-10 w-full`}>
+          {iconList.map((item, index) => (
+            <div
+              key={index}
+              className={styles.item}
+              style={{
+                animationDelay: `calc(${30}s / ${totalItems} * (${totalItems} - ${index}) * -1)`,
+              }}
+            >
+              {item.icon}
+              <span>{item.label}</span>
+            </div>
+          ))}
+        </div>
+      )}
     </>
   );
 };

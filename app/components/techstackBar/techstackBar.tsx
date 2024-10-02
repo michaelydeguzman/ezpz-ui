@@ -38,7 +38,7 @@ export const TechStackBar: React.FC<TechStackBarProps> = () => {
   const totalItems = iconList.length;
 
   return (
-    <div className={styles.scroller}>
+    <div className={`${styles.scroller} mt-10 w-full`}>
       {iconList.map((item, index) => (
         <div
           key={index}

@@ -102,13 +102,15 @@ const StarryBackground: React.FC = () => {
   }, []);
 
   return (
-    <canvas
-      id="canvas"
-      ref={canvasRef}
-      style={{
-        background: "none !important",
-      }}
-    />
+    <div id="background" className="absolute left-0 top-0 z-0 h-screen w-full">
+      <canvas
+        id="canvas"
+        ref={canvasRef}
+        style={{
+          background: "none !important",
+        }}
+      />
+    </div>
   );
 };
 

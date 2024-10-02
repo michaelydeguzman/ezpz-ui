@@ -5,6 +5,7 @@ import { SiJavascript, SiCsharp, SiTypescript } from "react-icons/si";
 import { RiNextjsFill } from "react-icons/ri";
 
 import styles from "./styles.module.scss";
+import useIsMobile from "@/app/hooks/useIsMobile";
 
 interface TechStackBarProps {
   // title: string | React.ReactNode;
@@ -36,21 +37,42 @@ export const TechStackBar: React.FC<TechStackBarProps> = () => {
 
   const iconList = [...icons]; // Duplicate the icons for a seamless loop
   const totalItems = iconList.length;
+  const isMobile = useIsMobile();
 
   return (
-    <div className={`${styles.scroller} mt-10 w-full`}>
-      {iconList.map((item, index) => (
-        <div
-          key={index}
-          className={styles.item}
-          style={{
-            animationDelay: `calc(${30}s / ${totalItems} * (${totalItems} - ${index}) * -1)`,
-          }}
-        >
-          {item.icon}
-          <span>{item.label}</span>
+    <>
+      {isMobile ? (
+        <div className="mt-10 grid grid-cols-4 gap-8">
+          {iconList.map((item, index) => (
+            <div
+              key={index}
+              className="flex flex-col items-center"
+              // className={styles.item}
+              style={{
+                animationDelay: `calc(${30}s / ${totalItems} * (${totalItems} - ${index}) * -1)`,
+              }}
+            >
+              {item.icon}
+              <span>{item.label}</span>
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
+      ) : (
+        <div className={`${styles.scroller} mt-10 w-full`}>
+          {iconList.map((item, index) => (
+            <div
+              key={index}
+              className={styles.item}
+              style={{
+                animationDelay: `calc(${30}s / ${totalItems} * (${totalItems} - ${index}) * -1)`,
+              }}
+            >
+              {item.icon}
+              <span>{item.label}</span>
+            </div>
+          ))}
+        </div>
+      )}
+    </>
   );
 };
